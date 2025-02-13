@@ -11,6 +11,9 @@ body {
 body.fade-out {
     opacity: 0;
 }
+body, .scroll-down, ul li {
+    transition: all 0.3s ease-in-out;
+}
 .hero {
     height: 100vh;
     background: transparent;
