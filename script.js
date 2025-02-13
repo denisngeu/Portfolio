@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         document.body.classList.add('fade-out');
         setTimeout(() => {
-            window.location.href = "https://denisngeu.github.io/project/";
+            window.location.href = "https://github.com/denisngeu/Portfolio/Projet/index.html";
         }, 500);
     });
 });
