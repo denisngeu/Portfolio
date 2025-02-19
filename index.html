@@ -5,19 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric.Denis</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(to bottom, #6a11cb, #2575fc);
+            background-attachment: fixed;
+            transition: opacity 0.5s ease-in-out;
+        }
+        body.fade-out {
+            opacity: 0;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .hero img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .hero img:hover {
+            transform: scale(1.15) rotate(5deg);
+        }
+        .hero h1 {
+            font-size: 3.2em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .scroll-down {
+            font-size: 1.2em;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            padding: 14px 28px;
+            border-radius: 30px;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+        }
+        .scroll-down:hover {
+            background: #fff;
+            color: #2575fc;
+            transform: scale(1.15);
+        }
+        section {
+            padding: 70px 25px;
+            max-width: 950px;
+            margin: 0 auto 50px auto;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 14px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        section:hover {
+            transform: scale(1.05);
+        }
+        section h2 {
+            color: #6a11cb;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f9f9f9;
+            padding: 16px 20px;
+            margin: 12px 0;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        ul li:hover {
+            background: #e0e0e0;
+            transform: scale(1.07);
+        }
+        a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <div class="hero">
         <img src="profile-picture.jpg" alt="Portrait professionnel de Eric Dénis">
         <h1>BIRIMBI NGUEMA Eric D.</h1>
-        <p>Développeur Web</p>
-        <a href="javascript:void(0)" class="scroll-down" id="projects-button">Accéder à mes projets</a>
+        <p>Développeur Web & Passionné de Technologie</p>
+        <a href="http://127.0.0.1:5500/projet.html" class="scroll-down" id="projects-button">Accéder à mes projets</a>
     </div>
 
     <section id="about" class="about">
         <h2>À propos de moi</h2>
-        <p>Jeune développeur web débutant passionné par la création de sites modernes et performants. Actuellement, je maîtrise les bases du développement front-end avec HTML, CSS, et JavaScript, et je m'initie également aux langages de programmation comme Python et Lua. Mon objectif est de transformer ma passion pour le web en une carrière solide, en créant des solutions intuitives et adaptées aux besoins des utilisateurs.</p>
+        <p>Développeur web passionné par la création d'interfaces modernes et performantes. J'explore les technologies du web, en front-end et back-end, et je suis toujours en quête d'apprentissage et d'innovation.</p>
     </section>
 
     <section id="skills" class="skills">
@@ -25,9 +137,9 @@
         <ul>
             <li>HTML, CSS, JavaScript</li>
             <li>Pawn, Lua</li>
-            <li>Python</li>
-            <li>Utilisation IA</li>
-            <li>Maintenance informatique</li>
+            <li>Python, PHP</li>
+            <li>Utilisation de l'IA et automatisation</li>
+            <li>Gestion et maintenance de serveurs</li>
         </ul>
     </section>
 
@@ -41,7 +153,5 @@
     <footer class="footer">
         <p>&copy; 2025 B.N.Eric Denis. Tous droits réservés.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
