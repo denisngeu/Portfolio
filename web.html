@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développement Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .project-list {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .project-item {
+            margin-bottom: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-left: 6px solid white;
+            padding-left: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            border-left: 6px solid orange;
+        }
+        .project-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-item:hover::before {
+            transform: scaleX(1);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            border-bottom: 3px solid white;
+            padding-bottom: 12px;
+            text-align: center;
+            font-size: 2em;
+        }
+        .status {
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.2em;
+        }
+        .status.completed { background: green; }
+        .status.in-progress { background: orange; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Développement Web</h1>
+        <p>Découvrez nos projets liés au développement web, allant des applications interactives aux sites modernes et performants.</p>
+        
+        <div class="project-list">
+            <h2>🚀 Nos Projets</h2>
+            <div class="project-item">
+                <div>
+                    <h3>✅ Moteur de Recherche Documentaire</h3>
+                    <p>Un moteur de recherche avancé pour trouver des documents spécifiques.</p>
+                </div>
+                <span class="status completed">🎯 Terminé</span>
+            </div>
+            <div class="project-item">
+                <div>
+                    <h3>📌 Site Référentiel d'Anime</h3>
+                    <p>Un site permettant de rechercher, classer et noter des animes.</p>
+                </div>
+                <span class="status in-progress">🚧 En cours</span>
+            </div>
+            <div class="project-item">
+                <div>
+                    <h3>📌 Générateur de Mails HTML/CSS</h3>
+                    <p>Outil permettant de générer des templates d'e-mails responsifs.</p>
+                </div>
+                <span class="status in-progress">🚧 En cours</span>
+            </div>
+            <div class="project-item">
+                <div>
+                    <h3>📌 Site de Téléchargement de ROMs</h3>
+                    <p>Une plateforme proposant des ROMs rétro de jeux vidéo.</p>
+                </div>
+                <span class="status in-progress">🚧 En cours</span>
+            </div>
+            <div class="project-item">
+                <div>
+                    <h3>📌 Site des Aides Étudiants Belfort</h3>
+                    <p>Un site regroupant les différentes aides pour les étudiants de Belfort.</p>
+                </div>
+                <span class="status in-progress">🚧 En cours</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(to bottom, #6a11cb, #2575fc);
+            background-attachment: fixed;
+            transition: opacity 0.5s ease-in-out;
+        }
+        body.fade-out {
+            opacity: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        h1 {
+            font-size: 2.5em;
+            position: absolute;
+            top: 20px;
+            left: 70px;
+            transition: transform 0.5s ease-in-out, opacity 0.5s;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 80px;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 320px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .project-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .project-card h2 {
+            font-size: 1.7em;
+            margin-bottom: 10px;
+        }
+        .project-card p {
+            font-size: 1.1em;
+        }
+        .project-card a {
+            color: #fff;
+            text-decoration: none;
+            background: #2575fc;
+            padding: 12px 18px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .project-card a:hover {
+            background: #6a11cb;
+            transform: scale(1.05);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            width: 100%;
+            font-size: 1.1em;
+            position: relative;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body class="fade-out">
+    <div class="container">
+        <h1 id="page-title">Mes Projets</h1>
+        <div class="projects">
+            <div class="project-card">
+                <img src="script-injection.jpg" alt="Illustration de création et injection de script">
+                <h2>Création et Injection de Script</h2>
+                <p>Développement et intégration de scripts automatisés.</p>
+                <a href="#">Voir plus</a>
+            </div>
+            <div class="project-card">
+                <img src="web-development.jpg" alt="Illustration de développement web">
+                <h2>Développement Web</h2>
+                <p>Création de sites modernes et d'interfaces interactives.</p>
+                <a href="#">Voir plus</a>
+            </div>
+            <div class="project-card">
+                <img src="server-management.jpg" alt="Illustration de gestion de serveur">
+                <h2>Gestion de Serveur</h2>
+                <p>Administration et sécurisation des infrastructures serveur.</p>
+                <a href="#">Voir plus</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2025 B.N.Eric Denis. Tous droits réservés.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('fade-out');
+            setTimeout(() => {
+                document.getElementById('page-title').style.transform = 'translateX(-50px)';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
