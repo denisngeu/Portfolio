@@ -17,11 +17,4 @@ if (contactButton) {
     window.location.href = "mailto:denisnguema10@gmail.com?subject=Contact via Portfolio&body=Bonjour,";
   });
 }
-document.querySelectorAll('.btn').forEach(button => {
-  if (button.textContent.trim() === "Voir Démo") {
-    button.addEventListener('click', function(event) {
-      event.preventDefault();
-      window.location.href = "indisponible.html";
-    });
-  }
-});
+
