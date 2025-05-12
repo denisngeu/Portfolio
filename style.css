@@ -1,5 +1,3 @@
-/* En vrais c'est dure j'ai fais trois jour juste pour le header  */
-
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +6,24 @@
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(25, 136, 247, 1), rgba(247, 25, 136, 1));
+    background-size: 200% 200%;
+    animation: gradient-animation 10s infinite alternate;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 header {
@@ -26,6 +42,12 @@ header {
     border-radius: 999px;
     z-index: 1000;
     width: fit-content;
+    transition: background 0.3s ease-in-out;
+
+}
+
+header:hover {
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .logo {
@@ -155,6 +177,8 @@ section{
     background-clip: text;
     color: transparent;
     font-size: 2rem;
+    -webkit-background-clip: text;
+
 }
 
 .information p{
@@ -367,42 +391,53 @@ footer ul li a:hover{
     .experience-info{
         flex-direction: column;
     }
-    .Lesinput input{
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
-    }
-    .input input::placeholder{
-        font-size: 2.5rem;
-    }
-    .Lesinput i{
-        font-size: 2.5rem;
-    }
+
 }
 
 @media(max-width:768px){
     header{
-        gap: 1rem;
-        padding: 1rem 1rem;
+        flex-direction: column;
+        padding: 1rem;
+        width: 100%;
     }
+    .navigation {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        max-height: 400px;
+        overflow-y: auto;
+        transition: max-height 0.5s ease;
+    }
+    .navigation.active {
+        max-height: 400px;
+    }  
     header.logo{
         font-size: 1rem;
     }
     header .action{
         display: none;
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    #menu_icon {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        cursor: pointer;
     }
     .section-Apropos{
         flex-direction: column;
     }
-    .Lesinput input{
-        padding: 1rem 2rem;
-        font-size: 1.8rem;
-    }
-    .Lesinput input::placeholder{
-        font-size: 1.5rem;
-    }
-    .Lesinput i{
-        display: none;
-    }
+    
     .grid{
         grid-template-columns: repeat(1,1fr);
     }
@@ -446,14 +481,7 @@ footer ul li a:hover{
     .section-Apropos img{
         width: 80vw;
     }
-    .Lesinput input{
-        padding: 0.5rem 3rem;
-        width: 80%;
-        font-size: 1.5rem;
-    }
-    .Lesinput input::placeholder{
-        font-size: 1.5rem;
-    }
+    
     footer ul{
         gap: 1rem;
     }
