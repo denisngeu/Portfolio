@@ -526,6 +526,15 @@ footer ul li a:hover{
     footer ul{
         gap: 1rem;
     }
+    .Languages .logos {
+        gap: 1.2rem;
+    }
+    .Languages .logos i {
+        font-size: 2.8rem;
+    }
+    .Languages .logos .logo-item span {
+        font-size: 0.9rem;
+    }
 }
 
 
