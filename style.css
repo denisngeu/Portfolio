@@ -549,7 +549,7 @@ footer ul li a:hover{
     }
 }
 
-/* Page indisponible*/
+/* Page indisponible
 
 body.page-indisponible {
     display: flex;
@@ -595,3 +595,5 @@ body.page-indisponible {
 .page-indisponible .lien-retour:hover {
     color: #0056b3;
 }
+*/
+
