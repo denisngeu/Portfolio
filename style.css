@@ -113,7 +113,6 @@ header:hover {
     display: none;
 }
 
-/*profil*/
 section{
     min-height: 100vh;
     padding: 8rem 12px;
@@ -236,7 +235,6 @@ section{
     transform: scale(1.2);
     
 }
-/*Mes Experience*/
 
 .titre{
     text-align: center;
@@ -293,8 +291,6 @@ section{
    display: none;
 }
 
-/*Mes projet*/
-
 .grilleProjet{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -341,7 +337,41 @@ section{
     font-size: 2rem;
     font-weight: 500;
 }
- 
+
+.Languages .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.Languages .logos .logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Languages .logos i {
+    font-size: 4rem; /* Plus grand */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+    opacity: 0.8;
+    color: #0a0a0a;
+}
+
+.Languages .logos i:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.Languages .logos .logo-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
 
 footer{
     bottom: 0;
@@ -443,6 +473,17 @@ footer ul li a:hover{
     }
     .experience-info img{
         width: 70vw;
+    }
+    .Languages .logos {
+        gap: 2rem;
+    }
+
+    .Languages .logos i {
+        font-size: 3rem;
+    }
+
+    .Languages .logos .logo-item span {
+        font-size: 0.9rem;
     }
 }
 
